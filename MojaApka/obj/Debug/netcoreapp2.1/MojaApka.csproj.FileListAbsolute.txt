@@ -1,0 +1,14 @@
+c:\users\filip\source\repos\MojaApka\MojaApka\bin\Debug\netcoreapp2.1\MojaApka.deps.json
+c:\users\filip\source\repos\MojaApka\MojaApka\bin\Debug\netcoreapp2.1\MojaApka.runtimeconfig.json
+c:\users\filip\source\repos\MojaApka\MojaApka\bin\Debug\netcoreapp2.1\MojaApka.runtimeconfig.dev.json
+c:\users\filip\source\repos\MojaApka\MojaApka\bin\Debug\netcoreapp2.1\MojaApka.dll
+c:\users\filip\source\repos\MojaApka\MojaApka\bin\Debug\netcoreapp2.1\MojaApka.pdb
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.csprojAssemblyReference.cache
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.csproj.CoreCompileInputs.cache
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.RazorAssemblyInfo.cache
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.RazorAssemblyInfo.cs
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.AssemblyInfoInputs.cache
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.AssemblyInfo.cs
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.RazorTargetAssemblyInfo.cache
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.dll
+c:\users\filip\source\repos\MojaApka\MojaApka\obj\Debug\netcoreapp2.1\MojaApka.pdb
