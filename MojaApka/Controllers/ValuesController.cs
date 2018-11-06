@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MojaApka.Domains;
-using MojaApka.Nowy_folder;
+using MojaApka.Data;
 
 namespace MojaApka.Controllers
 {
