@@ -24,6 +24,31 @@ namespace MojaApka.Controllers
             return Json(_context.Students.SingleOrDefault(x => x.Id == id));
         }
 
+        [HttpGet("students")]
+        public IActionResult Get()
+        {
+            return Json(_context.Students.AsEnumerable());
+        }
+
+        [HttpPut("students/{id}")]
+        public IActionResult Update(int id, [FromBody] CreateStudent createStudent)
+        {
+            var student = _context.Students.SingleOrDefault(x => x.Id == id);
+            student.Name = createStudent.Name;
+            _context.Update(student);
+            _context.SaveChanges();
+            return StatusCode(204);
+        }
+
+        [HttpDelete("students/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var student = _context.Students.SingleOrDefault(x => x.Id == id);
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+            return StatusCode(202);
+        }
+
         [HttpPost ("students")]
         public IActionResult Post([FromBody] CreateStudent createStudent)
         {
