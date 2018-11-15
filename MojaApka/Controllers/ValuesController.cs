@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MojaApka.Domains;
 using MojaApka.Data;
+using MojaApka.Services;
 
 namespace MojaApka.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly IStudentService _studentService;
         private readonly MojaApkaContext _context;
 
-        public ValuesController(MojaApkaContext context)
+        public ValuesController(MojaApkaContext context, IStudentService studentService)
         {
+            _studentService = studentService;
             _context = context;
         }
 
@@ -50,11 +53,9 @@ namespace MojaApka.Controllers
         }
 
         [HttpPost ("students")]
-        public IActionResult Post([FromBody] CreateStudent createStudent)
+        public async Task<IActionResult> Post([FromBody] CreateStudent createStudent)
         {
-            var student = new Student() {Name = createStudent.Name}; 
-            _context.Students.Add(student);
-            _context.SaveChanges();
+            await _studentService.CreateStudent(createStudent.Name);
             return StatusCode(201);
         }
     }

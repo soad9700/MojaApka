@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MojaApka.Data;
+using MojaApka.Repositories;
+using MojaApka.Services;
 
 namespace MojaApka
 {
@@ -24,6 +26,8 @@ namespace MojaApka
         {
             services.AddDbContext<MojaApkaContext>(opt => opt.UseInMemoryDatabase("MojaApkaDatabase"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<IStudentService, StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
