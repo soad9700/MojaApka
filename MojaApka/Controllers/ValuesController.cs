@@ -28,9 +28,10 @@ namespace MojaApka.Controllers
         }
 
         [HttpGet("students")]
-        public IActionResult Get()
+        public async Task<IActionResult> GetAll()
         {
-            return Json(_context.Students.AsEnumerable());
+            var students = await _studentService.GetAll();
+            return Json(students);
         }
 
         [HttpPut("students/{id}")]

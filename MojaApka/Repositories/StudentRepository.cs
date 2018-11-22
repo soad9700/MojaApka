@@ -21,5 +21,10 @@ namespace MojaApka.Repositories
             await _context.Students.AddAsync(student);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Student>> GetAll()
+        {
+            return await Task.FromResult(_context.Students.AsEnumerable());
+        }
     }
 }

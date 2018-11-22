@@ -20,8 +20,26 @@ namespace MojaApka.Services
         {
             var student = new Student();
             student.Name = name;
-            student.IndexNumber = 11085;
+            var students = await _studentRepository.GetAll();
+            var highestIndexNumer = 1;
+            if (!students.Any())
+                student.IndexNumber = highestIndexNumer;
+            else
+            {
+                foreach (var Student in students)
+                {
+                    if (Student.IndexNumber > highestIndexNumer)
+                        highestIndexNumer = Student.IndexNumber;
+                }
+                student.IndexNumber = highestIndexNumer + 1;
+            }
+
             await _studentRepository.AddAsync(student);
+        }
+
+        public async Task<IEnumerable<Student>> GetAll()
+        {
+            return await _studentRepository.GetAll();
         }
     }
 }

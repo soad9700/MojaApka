@@ -9,5 +9,6 @@ namespace MojaApka.Repositories
     public interface IStudentRepository
     {
         Task AddAsync(Student student);
+        Task<IEnumerable<Student>> GetAll();
     }
 }
